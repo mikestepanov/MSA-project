@@ -1,0 +1,20 @@
+Version 0.0.3
+
+
+
+Garbage:
+
+
+
+require 'socket'
+ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
+ip.ip_address
+
+
+require 'securerandom'
+random_string = SecureRandom.hex
+
+puts "Type secret question/phrase. Press enter if none."
+secret_question = gets.chomp
+puts "Type secret answer. Press enter if none."
+secret_answer = gets.chomp
